@@ -1,0 +1,99 @@
+/* Generated. One class per type style of the Observatory design system. */
+.display-xl {
+  font-family: var(--font-serif);
+  font-size: 72px;
+  line-height: 68px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.display-lg {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  line-height: 56px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.display-md {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.display-sm {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.body-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.code-sm {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+}

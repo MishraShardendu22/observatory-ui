@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    name: Pack, release, publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify
+      - name: Check the tag matches the package versions
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          for pkg in packages/tokens packages/ui; do
+            version=$(node -p "require('./$pkg/package.json').version")
+            if [ "$version" != "$tag" ]; then
+              echo "::error::$pkg is $version but the tag is $tag"; exit 1
+            fi
+          done
+      - run: pnpm run pack:release
+      - name: Create the GitHub release with both tarballs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" release/*.tgz \
+            --title "$GITHUB_REF_NAME" --generate-notes
+      - name: Publish to npm (only when NPM_TOKEN is set)
+        if: ${{ secrets.NPM_TOKEN != '' }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm -r publish --access public --no-git-checks --provenance

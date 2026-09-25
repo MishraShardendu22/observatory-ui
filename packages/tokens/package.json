@@ -1,0 +1,43 @@
+{
+  "name": "@mishrashardendu22/observatory-tokens",
+  "version": "0.1.0",
+  "description": "Design tokens of the Observatory design system: colours (dark first, light by device preference), type, spacing, radii, shadows and layout, as CSS custom properties, a Tailwind v4 theme and a typed JavaScript object.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css",
+    "./type.css": "./dist/type.css",
+    "./tokens.json": "./tokens.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "tokens.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MishraShardendu22/observatory-ui.git",
+    "directory": "packages/tokens"
+  },
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "css-variables",
+    "tailwind"
+  ]
+}

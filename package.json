@@ -1,0 +1,26 @@
+{
+  "name": "observatory-ui-workspace",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "build": "pnpm --filter @mishrashardendu22/observatory-tokens build",
+    "check:dist": "pnpm build && git diff --exit-code -- packages/tokens/dist",
+    "lint": "biome check",
+    "format": "biome format --write",
+    "typecheck": "tsc -p packages/ui/tsconfig.json && tsc -p packages/tokens/tsconfig.json",
+    "test": "node --test packages/tokens/scripts/build.test.mjs",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm check:dist",
+    "pack:release": "rm -rf release && mkdir -p release && for p in packages/*; do (cd \"$p\" && pnpm pack --pack-destination \"$OLDPWD/release\"); done"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.5",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "typescript": "^5.9.3"
+  }
+}
