@@ -41,7 +41,11 @@ jobs:
           gh release create "$GITHUB_REF_NAME" release/*.tgz \
             --title "$GITHUB_REF_NAME" --generate-notes
       - name: Publish to npm (only when NPM_TOKEN is set)
-        if: ${{ secrets.NPM_TOKEN != '' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm -r publish --access public --no-git-checks --provenance
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "No NPM_TOKEN secret: the GitHub release is the only distribution for this tag."
+            exit 0
+          fi
+          pnpm -r publish --access public --no-git-checks --provenance
