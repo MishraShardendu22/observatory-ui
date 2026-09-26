@@ -14,8 +14,8 @@ the components tree-shake.
 From a GitHub release (no npm account needed):
 
 ```bash
-pnpm add https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.0/mishrashardendu22-observatory-tokens-0.2.0.tgz \
-         https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.0/mishrashardendu22-observatory-ui-0.2.0.tgz
+pnpm add https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.1/mishrashardendu22-observatory-tokens-0.2.1.tgz \
+         https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.1/mishrashardendu22-observatory-ui-0.2.1.tgz
 ```
 
 From npm, once a release publishes there:

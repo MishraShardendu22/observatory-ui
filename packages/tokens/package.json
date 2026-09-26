@@ -1,6 +1,6 @@
 {
   "name": "@mishrashardendu22/observatory-tokens",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Design tokens of the Observatory design system: colours (dark first, light by device preference), type, spacing, radii, shadows and layout, as CSS custom properties, a Tailwind v4 theme and a typed JavaScript object.",
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
