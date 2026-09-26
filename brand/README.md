@@ -1,6 +1,6 @@
 # Brand assets
 
-- `observatory-mark.svg`: the mark in colour (amber disc, cream ring, one tile). Favicons, app icons, logos on a dark or light ground.
+- `observatory-mark.svg`: the mark in colour (amber disc, sand ring `#d9c49f` so it reads on light and dark grounds, one tile). Favicons, app icons, logos.
 - `observatory-mark-mono.svg`: the same mark as one ink (`currentColor`), for 16–28px tiles beside the product name. The `ObservatoryMark` component in `@mishrashardendu22/observatory-ui` renders it inline.
 - `source/`: the illustrations the sites use, re-encoded for the web at 1440–1600px wide. `hero.webp` (orbit scene, 4:3) is the landing hero; `landscape.webp` (ringed planet over ridges) is the closing panel; `eclipse.webp` is the docs home; `orbit-wide.webp` is the design site's banner; `mark.png` is the painted mark the vector is drawn from.
 
