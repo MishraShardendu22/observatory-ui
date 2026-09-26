@@ -10,10 +10,12 @@
     "check:dist": "pnpm build && git diff --exit-code -- packages/tokens/dist",
     "lint": "biome check",
     "format": "biome format --write",
-    "typecheck": "tsc -p packages/ui/tsconfig.json && tsc -p packages/tokens/tsconfig.json",
+    "typecheck": "tsc -p packages/ui/tsconfig.json && tsc -p packages/tokens/tsconfig.json && pnpm --filter observatory-docs typecheck",
     "test": "node --test packages/tokens/scripts/build.test.mjs",
     "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm check:dist",
-    "pack:release": "rm -rf release && mkdir -p release && for p in packages/*; do (cd \"$p\" && pnpm pack --pack-destination \"$OLDPWD/release\"); done"
+    "pack:release": "rm -rf release && mkdir -p release && for p in packages/*; do (cd \"$p\" && pnpm pack --pack-destination \"$OLDPWD/release\"); done",
+    "docs:dev": "pnpm build && pnpm --filter observatory-docs dev",
+    "docs:build": "pnpm build && pnpm --filter observatory-docs build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.5",

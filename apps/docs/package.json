@@ -1,0 +1,26 @@
+{
+  "name": "observatory-docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The website of the Observatory design system: tokens, components with live examples, and how to install it.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mishrashardendu22/observatory-tokens": "workspace:*",
+    "@mishrashardendu22/observatory-ui": "workspace:*",
+    "lucide-react": "^1.25.0",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
+  }
+}
