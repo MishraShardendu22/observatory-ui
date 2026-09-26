@@ -103,3 +103,26 @@ export function Skeleton({
     />
   );
 }
+
+export interface LoadingPanelProps extends ComponentPropsWithoutRef<"div"> {
+  message?: ReactNode;
+}
+
+/** A tall centred panel with a large spinner, for a whole region that is loading. */
+export function LoadingPanel({
+  message = "Loading",
+  className,
+  ...rest
+}: LoadingPanelProps) {
+  return (
+    <div
+      className={cn("loading-panel", className)}
+      aria-busy="true"
+      aria-live="polite"
+      {...rest}
+    >
+      <Spinner size="lg" className="loading-panel__spinner" />
+      <div className="loading-panel__text">{message}</div>
+    </div>
+  );
+}

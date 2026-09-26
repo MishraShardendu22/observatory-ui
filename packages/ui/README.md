@@ -14,8 +14,8 @@ the components tree-shake.
 From a GitHub release (no npm account needed):
 
 ```bash
-pnpm add https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.1.0/mishrashardendu22-observatory-tokens-0.1.0.tgz \
-         https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.1.0/mishrashardendu22-observatory-ui-0.1.0.tgz
+pnpm add https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.0/mishrashardendu22-observatory-tokens-0.2.0.tgz \
+         https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.0/mishrashardendu22-observatory-ui-0.2.0.tgz
 ```
 
 From npm, once a release publishes there:
@@ -76,13 +76,21 @@ markup that already uses those classes keeps working without the components.
 | `Notice` | inline success / error / warning / info messages |
 | `NavCard` | a linking card with an amber icon tile |
 | `EmptyState`, `ErrorState`, `LoadingState`, `Spinner`, `Skeleton` | states |
+| `AppShell`, `AppContent`, `AppMain`, `MobileHeader`, `SidebarOverlay` | the signed-in app frame: fixed sidebar, main column, a drawer with a top bar under 768px |
+| `Sidebar`, `SidebarHeader`, `SidebarBrand`, `SidebarToggle`, `SidebarNav`, `SidebarSection`, `SidebarFooter` | the sidebar's chrome |
+| `TreeNode`, `TreeGroup`, `TreeChildren` | sidebar rows: links, folder toggles, actions, collapsed icon-only rows with tooltips |
+| `Dropdown` | a select with an optional filter, for page sizes, models and modes |
+| `Tabs`, `Tab` | underline tabs between sibling pages |
+| `Pagination` | the footer of a paginated table |
+| `Dialog` | a modal panel over a scrim, for confirmations and short forms |
+| `LoadingPanel` | a tall centred spinner for a region that is loading |
 | `GitHubIcon` | the one brand mark |
 | `chartColors`, `chartTooltipStyle`, `chartAxisProps`, `chartGridProps` | Recharts props that follow the theme |
 
 Icons are [Lucide](https://lucide.dev): 16px inside controls, 18px in
 navigation, 20px in icon tiles. Components that need client-side behaviour
-(`Segmented`, `ErrorState`) carry `"use client"`; the rest work in server
-components.
+(`Segmented`, `ErrorState`, `Dropdown`, `Pagination`, `Dialog`) carry `"use client"`; the rest
+work in server components.
 
 ## Theme
 

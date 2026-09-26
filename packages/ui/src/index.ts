@@ -5,10 +5,35 @@ export {
   chartTooltipStyle,
 } from "./chart";
 export {
+  AppContent,
+  AppMain,
+  AppShell,
+  MobileHeader,
+  type MobileHeaderProps,
+  Sidebar,
+  SidebarBrand,
+  type SidebarBrandProps,
+  SidebarFooter,
+  SidebarHeader,
+  type SidebarHeaderProps,
+  SidebarNav,
+  SidebarOverlay,
+  type SidebarOverlayProps,
+  type SidebarProps,
+  SidebarSection,
+  SidebarToggle,
+  type SidebarToggleProps,
+  TreeChildren,
+  TreeGroup,
+  TreeNode,
+  type TreeNodeProps,
+} from "./components/AppShell";
+export {
   Badge,
   type BadgeProps,
   type BadgeVariant,
   Pill,
+  type PillProps,
   StatusBadge,
   type StatusBadgeProps,
   statusVariant,
@@ -32,6 +57,12 @@ export {
   CardTitle,
   type CardVariant,
 } from "./components/Card";
+export { Dialog, type DialogProps } from "./components/Dialog";
+export {
+  Dropdown,
+  type DropdownOption,
+  type DropdownProps,
+} from "./components/Dropdown";
 export { ErrorState, type ErrorStateProps } from "./components/ErrorState";
 export {
   Checkbox,
@@ -62,6 +93,7 @@ export {
   PageHeader,
   type PageHeaderProps,
 } from "./components/PageHeader";
+export { Pagination, type PaginationProps } from "./components/Pagination";
 export {
   Segmented,
   type SegmentedOption,
@@ -78,6 +110,8 @@ export {
 export {
   EmptyState,
   type EmptyStateProps,
+  LoadingPanel,
+  type LoadingPanelProps,
   LoadingState,
   type LoadingStateProps,
   Skeleton,
@@ -87,4 +121,5 @@ export {
 } from "./components/States";
 export { type Step, Steps, type StepsProps } from "./components/Steps";
 export { Table, type TableProps, TableWrap } from "./components/Table";
+export { Tab, type TabProps, Tabs, type TabsProps } from "./components/Tabs";
 export { cn } from "./lib/cn";

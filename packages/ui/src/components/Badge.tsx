@@ -95,14 +95,31 @@ export function StatusBadge({ status, children, ...rest }: StatusBadgeProps) {
   );
 }
 
+export interface PillProps extends ComponentPropsWithoutRef<"span"> {
+  /** Amber outline and ink, for the selected tag in a set. */
+  active?: boolean;
+  /** 10px uppercase, for dense tool lists. */
+  size?: "sm" | "md";
+}
+
 /** A plain tag for branches, versions and tool names. */
 export function Pill({
+  active = false,
+  size = "md",
   className,
   children,
   ...rest
-}: ComponentPropsWithoutRef<"span">) {
+}: PillProps) {
   return (
-    <span className={cn("pill", className)} {...rest}>
+    <span
+      className={cn(
+        "pill",
+        active && "pill--active",
+        size === "sm" && "pill--sm",
+        className,
+      )}
+      {...rest}
+    >
       {children}
     </span>
   );

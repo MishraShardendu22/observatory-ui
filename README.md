@@ -15,8 +15,8 @@ release, so an app installs them with one command and no registry token:
 
 ```bash
 pnpm add \
-  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.1.0/mishrashardendu22-observatory-tokens-0.1.0.tgz \
-  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.1.0/mishrashardendu22-observatory-ui-0.1.0.tgz
+  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.0/mishrashardendu22-observatory-tokens-0.2.0.tgz \
+  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.0/mishrashardendu22-observatory-ui-0.2.0.tgz
 ```
 
 The same workflow publishes to npm when the repository has an `NPM_TOKEN`
