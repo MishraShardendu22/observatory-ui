@@ -22,15 +22,6 @@ pnpm add \
 The same workflow publishes to npm when the repository has an `NPM_TOKEN`
 secret; from then on `pnpm add @mishrashardendu22/observatory-ui` works too.
 
-## Docs site
-
-[mishrashardendu22.github.io/observatory-ui](https://mishrashardendu22.github.io/observatory-ui/): every token in both themes, every component rendered live beside its code, and the install guide. It is `apps/docs`, a static Next.js export that the `Docs site` workflow deploys to GitHub Pages on every push to `main`.
-
-```bash
-pnpm docs:dev      # http://localhost:3000
-pnpm docs:build    # apps/docs/out
-```
-
 ## Develop
 
 ```bash
@@ -59,5 +50,4 @@ tarballs, and publishes to npm if `NPM_TOKEN` is set.
 ## Consumers
 
 - `github-backup-dashboard` (Next.js 16) in the main repository.
-- `apps/docs`, this repository's own site.
-- Planned: a mobile monitor (tokens only).
+- Planned: the docs site and a mobile monitor (tokens only).

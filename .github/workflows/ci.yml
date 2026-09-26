@@ -23,9 +23,5 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm verify
-      - name: Build the docs site
-        env:
-          NEXT_TELEMETRY_DISABLED: 1
-        run: pnpm --filter observatory-docs build
       - name: Pack both packages
         run: pnpm run pack:release && ls -la release
