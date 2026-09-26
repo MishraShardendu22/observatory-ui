@@ -88,6 +88,10 @@ export {
   type NoticeVariant,
 } from "./components/Notice";
 export {
+  ObservatoryMark,
+  type ObservatoryMarkProps,
+} from "./components/ObservatoryMark";
+export {
   Kicker,
   type KickerProps,
   PageHeader,

@@ -14,8 +14,8 @@ the components tree-shake.
 From a GitHub release (no npm account needed):
 
 ```bash
-pnpm add https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.1/mishrashardendu22-observatory-tokens-0.2.1.tgz \
-         https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.1/mishrashardendu22-observatory-ui-0.2.1.tgz
+pnpm add https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.3.0/mishrashardendu22-observatory-tokens-0.3.0.tgz \
+         https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.3.0/mishrashardendu22-observatory-ui-0.3.0.tgz
 ```
 
 From npm, once a release publishes there:
@@ -84,7 +84,8 @@ markup that already uses those classes keeps working without the components.
 | `Pagination` | the footer of a paginated table |
 | `Dialog` | a modal panel over a scrim, for confirmations and short forms |
 | `LoadingPanel` | a tall centred spinner for a region that is loading |
-| `GitHubIcon` | the one brand mark |
+| `ObservatoryMark` | the product mark as one ink (`brand/` has the colour SVG) |
+| `GitHubIcon` | GitHub's mark, for links to GitHub |
 | `chartColors`, `chartTooltipStyle`, `chartAxisProps`, `chartGridProps` | Recharts props that follow the theme |
 
 Icons are [Lucide](https://lucide.dev): 16px inside controls, 18px in

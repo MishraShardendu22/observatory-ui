@@ -15,8 +15,8 @@ release, so an app installs them with one command and no registry token:
 
 ```bash
 pnpm add \
-  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.1/mishrashardendu22-observatory-tokens-0.2.1.tgz \
-  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.2.1/mishrashardendu22-observatory-ui-0.2.1.tgz
+  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.3.0/mishrashardendu22-observatory-tokens-0.3.0.tgz \
+  https://github.com/MishraShardendu22/observatory-ui/releases/download/v0.3.0/mishrashardendu22-observatory-ui-0.3.0.tgz
 ```
 
 The same workflow publishes to npm when the repository has an `NPM_TOKEN`
@@ -41,7 +41,7 @@ system; each token also carries a `usage` note in the JSON.
 
 ```bash
 # bump both package versions, then
-git tag v0.2.1 && git push origin v0.2.1
+git tag v0.3.0 && git push origin v0.3.0
 ```
 
 The release workflow verifies, packs, creates the GitHub release with the two
