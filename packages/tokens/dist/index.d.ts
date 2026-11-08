@@ -6,7 +6,7 @@ export type RadiusToken = "radius-sm" | "radius-md" | "radius-lg" | "radius-xl" 
 export type LayoutToken = "content-max" | "sidebar-width" | "sidebar-collapsed" | "topbar-height" | "control-height";
 export type ShadowToken = "shadow-sm" | "shadow-md" | "shadow-glow";
 export type TypeStyle = "display-xl" | "display-lg" | "display-md" | "display-sm" | "stat-value" | "body-lg" | "body" | "body-sm" | "label" | "caption" | "kicker" | "code" | "code-sm";
-export interface TypeStyleValue { family: string; fontSize: string; lineHeight: string; fontWeight: number; letterSpacing?: string }
+export interface TypeStyleValue { family: string; fontSize: string; lineHeight: string; fontWeight: number; letterSpacing?: string; phone?: { fontSize?: string; lineHeight?: string } }
 export interface Tokens {
   name: string;
   version: number;
@@ -18,6 +18,8 @@ export interface Tokens {
   layout: Record<LayoutToken, string>;
   fonts: Record<string, string>;
   type: Record<TypeStyle, TypeStyleValue>;
+  /** Phone widths: the type styles' `phone` values apply at maxWidth and below. */
+  phone: { maxWidth: string; minFontSize: string };
 }
 export declare const tokens: Tokens;
 export declare const themes: ThemeId[];

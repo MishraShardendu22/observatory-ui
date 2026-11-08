@@ -2165,3 +2165,16 @@ svg {
     min-height: 44px;
   }
 }
+
+/* ── Phones ──────────────────────────────────────────────────────── */
+/* Nothing reads under 12px on a phone: the uppercase labels grow from 10-11px. */
+@media (max-width: 767px) {
+  .kicker,
+  .page-kicker,
+  .stat-label,
+  .pill--sm,
+  .tree-section,
+  .sidebar__section {
+    font-size: 12px;
+  }
+}
