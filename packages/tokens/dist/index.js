@@ -253,7 +253,10 @@ export const tokens = {
       "fontSize": "11px",
       "lineHeight": "16px",
       "fontWeight": 700,
-      "letterSpacing": "0.14em"
+      "letterSpacing": "0.14em",
+      "phone": {
+        "fontSize": "12px"
+      }
     },
     "code": {
       "family": "mono",
@@ -267,6 +270,10 @@ export const tokens = {
       "lineHeight": "16px",
       "fontWeight": 400
     }
+  },
+  "phone": {
+    "maxWidth": "767px",
+    "minFontSize": "12px"
   }
 };
 export const themes = tokens.themes;

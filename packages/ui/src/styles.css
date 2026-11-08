@@ -2150,3 +2150,31 @@ svg {
     padding: 20px;
   }
 }
+
+/* ── Touch screens ───────────────────────────────────────────────── */
+/* 44px is the smallest comfortable tap target; mouse and trackpad sizes stay as they are. */
+@media (pointer: coarse) {
+  .btn--sm,
+  .segmented-btn,
+  .dropdown__trigger {
+    min-height: 44px;
+  }
+  .icon-button,
+  .mobile-menu-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ── Phones ──────────────────────────────────────────────────────── */
+/* Nothing reads under 12px on a phone: the uppercase labels grow from 10-11px. */
+@media (max-width: 767px) {
+  .kicker,
+  .page-kicker,
+  .stat-label,
+  .pill--sm,
+  .tree-section,
+  .sidebar__section {
+    font-size: 12px;
+  }
+}

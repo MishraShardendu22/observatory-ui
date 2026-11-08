@@ -11,7 +11,7 @@ Inter, hairline borders instead of shadows.
 | --- | --- |
 | `tokens.css` | CSS custom properties. Dark is the default. When the device prefers light and the page does not set `data-theme`, the light values apply. `<html data-theme="dark">` or `"light"` pins a theme. |
 | `theme.css` | A Tailwind v4 `@theme inline` block: `bg-bg-100`, `text-ink-muted`, `border-border`, `rounded-lg`, `font-serif`, `shadow-glow`. |
-| `type.css` | One class per type style: `.display-xl`, `.body`, `.kicker`, `.stat-value`, `.code`. |
+| `type.css` | One class per type style: `.display-xl`, `.body`, `.kicker`, `.stat-value`, `.code`; styles with `phone` values in `tokens.json` (the kicker) grow to 12px at 767px and below. |
 | `index.js` | The resolved values as a typed object (`tokens.color["accent"].dark`) plus `chart` (CSS variable references for chart libraries). Use this from React Native or anything without CSS. |
 
 ## Use

@@ -8,6 +8,8 @@ import {
 import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import { cn } from "../lib/cn";
 
+export { Sidebar, type SidebarProps } from "./Sidebar";
+
 /*
  * The signed-in app frame: a fixed sidebar on the left, a main column, and
  * a drawer with a top bar under 768px. The sidebar's width comes from
@@ -109,28 +111,6 @@ export function SidebarOverlay({ open, onClose }: SidebarOverlayProps) {
       onClick={onClose}
       aria-hidden="true"
     />
-  );
-}
-
-export interface SidebarProps extends ComponentPropsWithoutRef<"aside"> {
-  /** Shown as the drawer under 768px. */
-  open?: boolean;
-}
-
-/** The fixed sidebar. Give it an id and aria-label; MobileHeader points at the id. */
-export function Sidebar({
-  open = false,
-  className,
-  children,
-  ...rest
-}: SidebarProps) {
-  return (
-    <aside
-      className={cn("global-sidebar", open && "mobile-open", className)}
-      {...rest}
-    >
-      {children}
-    </aside>
   );
 }
 
