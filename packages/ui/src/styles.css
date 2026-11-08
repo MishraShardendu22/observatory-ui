@@ -2150,3 +2150,18 @@ svg {
     padding: 20px;
   }
 }
+
+/* ── Touch screens ───────────────────────────────────────────────── */
+/* 44px is the smallest comfortable tap target; mouse and trackpad sizes stay as they are. */
+@media (pointer: coarse) {
+  .btn--sm,
+  .segmented-btn,
+  .dropdown__trigger {
+    min-height: 44px;
+  }
+  .icon-button,
+  .mobile-menu-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
