@@ -77,7 +77,7 @@ markup that already uses those classes keeps working without the components.
 | `NavCard` | a linking card with an amber icon tile |
 | `EmptyState`, `ErrorState`, `LoadingState`, `Spinner`, `Skeleton` | states |
 | `AppShell`, `AppContent`, `AppMain`, `MobileHeader`, `SidebarOverlay` | the signed-in app frame: fixed sidebar, main column, a drawer with a top bar under 768px |
-| `Sidebar`, `SidebarHeader`, `SidebarBrand`, `SidebarToggle`, `SidebarNav`, `SidebarSection`, `SidebarFooter` | the sidebar's chrome |
+| `Sidebar`, `SidebarHeader`, `SidebarBrand`, `SidebarToggle`, `SidebarNav`, `SidebarSection`, `SidebarFooter` | the sidebar's chrome; a closed drawer (768px and narrower) is `inert` and `aria-hidden` |
 | `TreeNode`, `TreeGroup`, `TreeChildren` | sidebar rows: links, folder toggles, actions, collapsed icon-only rows with tooltips |
 | `Dropdown` | a select with an optional filter, for page sizes, models and modes |
 | `Tabs`, `Tab` | underline tabs between sibling pages |
